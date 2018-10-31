@@ -2,6 +2,7 @@
 local.py
 manage.py
 db.sqlite3
+
 static/
 
 
