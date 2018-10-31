@@ -1,0 +1,44 @@
+html{
+    box-sizing: border-box;
+    font: 20px;
+}
+body{
+    background-color: #ffffff;
+    margin: 0 auto;
+    
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body.fixed-nav nav {
+    position: fixed;
+    box-shadow: 0 5px 0 rgba(0,0,0,0.1);
+  }
+  .fixed-nav li.logo {
+    max-width: 500px;
+  }
+
+.site-wrap {
+  max-width: 700px;
+  margin: 70px auto;
+  background: white;
+  padding: 40px;
+  text-align: justify;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.05);
+  transform: scale(0.98);
+  transition: transform 0.5s;
+}
+body.fixed-nav .site-wrap {
+  transform: scale(1);
+}
+
+.slide-in{
+    opacity: 0;
+    transform:translateX(30%) scale(0.95);
+}
+.slide-in.active{
+    opacity: 1;
+    transform: translateX(0%) scale(1); 
+}

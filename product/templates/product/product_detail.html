@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="detail">
+            
+            {% if object.img %}
+            <img src="{{ object.img.url }}" alt=""/>
+            {% endif %}
+            <h2 class='col-sm-12'>{{ object.name }}</h2>
+            <p class='col-sm-12'>{{ object.description }}</p>                        
+        </div>
+        <div class="col-12 product">
+            <a href="/product/{{object.id}}/update" alt="update_item">
+                <button type="button" class="btn btn-outline-dark">Update</button>
+            </a>
+            <a href="/product/{{object.id}}/delete" alt="delete_item">
+                <button type="button" class="btn btn-outline-dark">Delete</button>
+            </a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

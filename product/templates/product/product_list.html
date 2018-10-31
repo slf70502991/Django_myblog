@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<div class="container">
+    
+    <div class="row">
+        <div class="col-12 product">
+            <a href="create/" alt="add_new_item"><button type="button" class="btn btn-outline-dark">Add new product</button></a>
+            
+        </div>
+            {% for instance in object_list %}
+        <div class="col-md-6 col-sm-12 product">
+            {% if instance.img %}
+            <img src="{{ instance.img.url }}" alt="" width="90%" />
+            {% endif %}
+            <div>
+                <h3>
+                    <a href="{{ instance.get_absolute_url }}">{{ instance.name }}</a>
+                </h3>
+                <p class='price'>NTD. {{instance.price}} </p>
+            </div>
+            
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+{% endblock %}

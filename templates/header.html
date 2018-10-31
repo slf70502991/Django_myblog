@@ -1,0 +1,30 @@
+{% load staticfiles %}
+
+{% block extrahead %}
+<!-- <link rel="stylesheet" href="{% static 'css/nav.css' %}"> -->
+{% endblock extrahead %}
+
+{% block content %}
+
+<nav id="main">
+        <ul>
+          <li class="logo"><a href="#">LOGO</a>
+          </li>
+          <li class="menu"><a href="/">Home</a>
+          </li>
+          <li class="menu"><a href="/about/">About</a>
+          </li>
+          <li class="menu"><a href="/product/">Products</a>
+          </li>
+          <li class="menu"><a href="/contact/">Contact</a>
+          </li>
+          <li class="ham" onclick="toCross(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+
+{% endblock%}
