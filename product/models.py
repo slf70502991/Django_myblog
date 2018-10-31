@@ -13,7 +13,7 @@ def validate_even(value):
 
 class Product(models.Model):
     name = models.CharField(max_length=200)
-    img = models.ImageField(upload_to = 'pictures/', max_length = 255, null=True, blank = True)
+    img = models.ImageField(upload_to = '', max_length = 255, null=True, blank = True)
     price = models.IntegerField(validators=[validate_even])
     description = models.TextField(blank=True, null=True)
 

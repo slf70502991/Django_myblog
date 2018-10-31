@@ -12,10 +12,10 @@
     {% block extrahead %}{% endblock %}
 </head>
 <body>
-    {% include 'header.html' %}
+    
     
     {% block content %}
-    
+    {% include 'header.html' %}
     {% endblock content %}
     
     <script src="{% static 'js/scripts.js' %}"></script>
